@@ -1,0 +1,71 @@
+
+.pulse-button {
+    position: relative;
+    padding: 11px 18px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+    border-radius: 30px;
+    background-color: #e84c3d;
+    /* background-image: url(http://powerandco.net/wp-content/uploads/2017/12/powernewicon.png); */
+    background-size:111%;
+    background-position:-5px -5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+  }
+  .pulse-button:hover 
+  {
+    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+  }
+  
+  @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+  @-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+  @-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+        @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+  
+
+.button-wiggle {
+  animation: wiggle 4s 2s infinite;
+}
+
+@keyframes wiggle {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+
+.home-title-gradient {
+  background: linear-gradient(45deg, #FF5722,#2196F3);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.icon_container {
+  
+}
