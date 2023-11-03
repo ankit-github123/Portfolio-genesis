@@ -14,12 +14,12 @@ const UsersSchema = new Schema({
         lowercase: true,
     },
     image: String,
-    username: {
-        type: String,
-        unique: true,
-        trim: true,
-        lowercase: true,
-    },
+    // username: {
+    //     type: String,
+    //     unique: true,
+    //     trim: true,
+    //     lowercase: true,
+    // },
 });
 
 export default models.Users || model('Users', UsersSchema);

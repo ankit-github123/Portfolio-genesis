@@ -15,7 +15,7 @@ const Home = () => {
         initializeProviders()
     }, [])
     const { data: session } = useSession();
-    console.log(providers, session, 'providers1')
+
     return (
         <div className='relative'>
             <div className="h-20 flex items-center w-full justify-between">
@@ -24,10 +24,10 @@ const Home = () => {
                     <div className='w-full text-lg font-medium tracking-wide font-opensans'>Portfolio Genesis</div>
                 </div>
                 {session?.user ? (
-                    <div className="flex items-center gap-3"><Image src={session.user.image} width={26} height={26} className="rounded-full" /><span className="font-thin text-[15px]">{session.user.name}</span></div>
+                    <div className="flex items-center gap-3"><Image src={session.user.image} width={26} height={26} className="rounded-full" alt="Protfolio genesis" /><span className="font-thin text-[15px]">{session.user.name}</span></div>
                 ) : <div className=''>
                     {providers && Object.values(providers).map((provider) => {
-                        return <button onClick={() => signIn(provider.id, { callbackUrl: '/newportfolio' })} className='btn btn-primary'>Sign in</button>
+                        return <button key={provider.id} onClick={() => signIn(provider.id, { callbackUrl: '/newportfolio' })} className='btn btn-primary'>Sign in</button>
                     })}
                 </div>}
 

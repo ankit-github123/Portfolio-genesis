@@ -1,6 +1,7 @@
 'use client'
 import { createContext, useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
+import { isValidObject } from "@utils/services";
 export const AppContext = createContext()
 
 export const AppContextProvider = ({ children }) => {
@@ -9,7 +10,8 @@ export const AppContextProvider = ({ children }) => {
     const [session, setSession] = useState();
 
     useEffect(() => {
-        setSession(data);
+        if (isValidObject(data))
+            setSession(data);
     }, [data])
     return <AppContext.Provider value={{ portfolio, setPortfolio, session }}>{children}</AppContext.Provider>
 }

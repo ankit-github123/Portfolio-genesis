@@ -1,75 +1,90 @@
 .main {
-    width: 100vw;
-    min-height: 100vh;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    padding: 120px 24px 160px 24px;
-    pointer-events: none;
-  }
-  
-  .main:before {
-    background: radial-gradient(circle, rgba(2, 0, 36, ) ,rgba((31, 34, 51), rgba((25, 28, 45)),var(--primary-bg)  100%));
-    position: absolute;
-    content: "";
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
-  
-  .main:after {
-    content: "";
-    background-image: url("/images/common/grid.svg");
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0.4;
-    filter: invert(1);
-  }
-  
-  .gradient {
-    height: fit-content;
-    z-index: 3;
-    width: 100%;
-    max-width: 640px;
-    /* background-image: linear-gradient(135deg, #1F2233, #4c4d5d),
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36),
+    rgba((31, 34, 51), rgba((25, 28, 45)), var(--primary-bg) 100%)
+  );
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/images/common/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  /* background-image: linear-gradient(135deg, #1F2233, #4c4d5d),
   linear-gradient(45deg, #1F2233, #3E405B);
 background-size: 50% 100%;
 background-repeat: no-repeat; */
 
-/* background: radial-gradient(#1F2233, #1F2233 33%, #48516B 33%, #48516B 66%, #6A769A 66%, #6A769A); */
+  /* background: radial-gradient(#1F2233, #1F2233 33%, #48516B 33%, #48516B 66%, #6A769A 66%, #6A769A); */
 
-/* background-image: radial-gradient(
+  /* background-image: radial-gradient(
   at center center,
   #1F2233 0%,
   transparent 100%
 ); */
 
-    background-image: radial-gradient(
-        at 27% 37%,
-        hsla(215, 98%, 61%, 1) 0px,
-        transparent 0%
-      ),
-      /* radial-gradient(at 97% 21%, #FF5722 0px, transparent 50%), */
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    /* radial-gradient(at 97% 21%, #FF5722 0px, transparent 50%), */
       /* radial-gradient(at 52% 99%, rgb(27, 23, 69) 0px, transparent 50%), */
-      radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.75) 0px, transparent 85%),
-      /* radial-gradient(at 97% 96%, rgb(169, 147, 110) 0px, transparent 50%), */
+      radial-gradient(
+        at 10% 29%,
+        hsla(256, 96%, 67%, 0.75) 0px,
+        transparent 85%
+      ),
+    /* radial-gradient(at 97% 96%, rgb(169, 147, 110) 0px, transparent 50%), */
       radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-      radial-gradient(at 79% 53%, rgb(168, 117, 131) 0px, transparent 50%);
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    filter: blur(100px) saturate(150%);
-    top: 80px;
-    opacity: 0.15;
+    radial-gradient(at 79% 53%, rgb(168, 117, 131) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+.box-shadow-main1 {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
   }
-  
-  @media screen and (max-width: 640px) {
-    .main {
-      padding: 0;
-    }
-  }
+}

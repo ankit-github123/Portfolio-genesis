@@ -7,7 +7,7 @@ const navelementsObject = [];
 
 const NavElements = () => {
     const element = (index, isactive) => (
-        <div className={`mx-4 border-b border-[rgba(255,255,255,0.1)]`}>
+        <div key={`element${index}`} className={`mx-4 border-b border-[rgba(255,255,255,0.1)]`}>
             {isactive ? (
                 <div className="font-normal h-14 text-lg flex items-end">
                     <div className="flex gap-2 items-end">
@@ -22,7 +22,7 @@ const NavElements = () => {
                     <div></div>
                 </div>
             ) : (
-                <div className="font-light items-center opacity-70 h-14 italic flex justify-between gap-2  hover:bg-primary">
+                <div key={`element${index}`} className="font-light items-center opacity-70 h-14 flex justify-between gap-2  hover:bg-primary">
                     <div className="flex gap-2 items-end">
                         <AiOutlineSetting size={22} className="" />
                         My Services

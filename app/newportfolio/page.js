@@ -4,23 +4,25 @@ import { AppContext } from '@context/AppContext';
 import React, { useContext, useEffect, useState } from 'react'
 
 const NewPortFolio = () => {
-    const { session } = useContext(AppContext)
+    const { session, portfolio } = useContext(AppContext)
     const [file, setFile] = useState("");
     const [imageData, setImageData] = useState(null);
-    useEffect(() => {
-        const fetchdata = async () => {
-            const data = await fetch('/api/create-profile', {
-                method: 'GET'
-            })
-            const res = await data.json();
-            console.log(res, 'dt1')
-            const bufferData = new Uint8Array(res.result[1].img.data);
-            const blob = new Blob([bufferData], { type: 'image/jpeg' }); // Change the 'type' if the image is a different format
-            const imageUrl = URL.createObjectURL(blob);
-            setImageData(imageUrl);
-        }
-        fetchdata()
-    }, [])
+    // useEffect(() => {
+    //     const fetchdata = async () => {
+    //         const data = await fetch('/api/create-profile', {
+    //             method: 'GET'
+    //         })
+    //         const res = await data.json();
+    //         console.log(res, 'dt1')
+    //         const bufferData = new Uint8Array(res.result[1].img.data);
+    //         const blob = new Blob([bufferData], { type: 'image/jpeg' }); // Change the 'type' if the image is a different format
+    //         const imageUrl = URL.createObjectURL(blob);
+    //         setImageData(imageUrl);
+    //     }
+    //     fetchdata()
+    // }, [])
+
+    console.log(portfolio, 'portfolio1')
     const handleClick = async () => {
         console.log(file, ' str1')
         try {
@@ -40,20 +42,15 @@ const NewPortFolio = () => {
 
     }
     return (
-        <div className='bg-primary h-screen w-full overflow-scroll'>
-            <div className='bg-secondary w-full h-[5vh]'>
-            </div>
-            <div className='bg-secondary m-6 rounded-md border-extralight h-[88vh] box-shadow-main overflow-scroll'>
-                <input type='file' accept='image/*' onChange={(e) => setFile(e.target.files[0])} />
-                <button onClick={handleClick}>click</button>
-                {imageData && (
-                    <img src={imageData} className='w-20 h-20' alt="Uploaded Image" />
-                )}
-            </div>
-
-            {/* <Sample /> */}
-        </div>
+        <>
+        </>
     )
 }
 
 export default NewPortFolio
+
+{/* <input type='file' accept='image/*' onChange={(e) => setFile(e.target.files[0])} />
+<button onClick={handleClick}>click</button>
+{imageData && (
+    <img src={imageData} className='w-20 h-20' alt="Uploaded Image" />
+)} */}

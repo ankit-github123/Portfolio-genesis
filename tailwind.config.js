@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       borderColor: {
         primary: 'var(--color-home)',
-        secondary: 'var(--border-light)'
+        secondary: 'var(--border-light)',
+        lightest: 'var(--border-extralight)'
       },
       fontFamily: {
         opensans: ['Open Sans', 'sans-serif']
@@ -21,6 +22,7 @@ module.exports = {
       },
       colors: {
         'default': '#ffffff',
+        'light': 'rgba(255,255,255,0.7)',
         'home': 'var(--color-home)'
       },
       backgroundColor: {

@@ -1,29 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700&family=Roboto:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500&display=swap');@tailwind base;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500&display=swap");
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   /* font-family: 'Lato', sans-serif !important; */
   /* font-family: 'Roboto', sans-serif !important; */
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 :root {
   --color-primary: #fff;
   --color-secondary: #e24840;
   --color-home: #ab0033;
-  --primary-bg: #1F2233;
+  --primary-bg: #1f2233;
   --secondary-bg: #24283d;
   --btn-primary: #e24840;
   --btn-home: #ab0033;
-  --border-light: rgba(255,255,255,0.1)
+  --border-light: rgba(255, 255, 255, 0.35);
+  --border-extralight: rgba(255, 255, 255, 0.05);
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
 
 @layer base {
   body {
@@ -31,17 +30,20 @@ body {
   }
   .btn {
     @apply py-2 px-4 rounded-full;
-     @apply enabled:active:scale-95;
-     @apply enabled:hover:opacity-80;
+    @apply enabled:active:scale-95;
+    @apply enabled:hover:opacity-80;
   }
   .btn-primary {
     @apply bg-btn;
   }
   .btn_home {
-    @apply bg-btn_home
+    @apply bg-btn_home;
   }
   .border-extralight {
-    @apply border border-[rgba(255,255,255,0.05)]
+    @apply border border-[rgba(255,255,255,0.05)];
+  }
+  .border-light1 {
+    @apply border border-[rgba(255,255,255,0.1)];
   }
   .box-shadow-main {
     box-shadow: 0 0 20px 10px rgba(40, 42, 51, 0.7);

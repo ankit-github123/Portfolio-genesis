@@ -17,9 +17,9 @@ const handler = NextAuth({
         async session({ session }) {
             // store the user id from MongoDB to session
             try {
-                const sessionUser = await Users.findOne({ email: session.user.email });
-                session.user.id = sessionUser._id.toString();
-                session.user.username = sessionUser.username;
+                // const sessionUser = await Users.findOne({ email: session.user.email });
+                // session.user.id = sessionUser._id.toString();
+                // session.user.username = sessionUser.username;
                 return session;
             } catch (err) {
                 console.error(err.message)
@@ -30,15 +30,15 @@ const handler = NextAuth({
             // console.error(user)
             try {
                 await connectToDB();
-                const userExists = await Users.findOne({ email: profile?.email });
-                if (userExists === null) {
-                    await Users.create({
-                        email: profile?.email,
-                        name: profile?.name.replace(/\s+/g, '').toLowerCase(),
-                        image: profile?.picture,
-                        username: "",
-                    })
-                }
+                // const userExists = await Users.findOne({ email: profile?.email });
+                // if (userExists === null) {
+                //     await Users.create({
+                //         email: profile?.email,
+                //         name: profile?.name.replace(/\s+/g, '').toLowerCase(),
+                //         image: profile?.picture,
+                //         username: "",
+                //     })
+                // }
                 return true
             } catch (err) {
                 console.error(err.message);
