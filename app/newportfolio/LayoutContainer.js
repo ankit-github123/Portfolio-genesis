@@ -23,7 +23,7 @@ const LayoutContainer = (props) => {
                                     <div className='border border-primary w-[6%] mt-2'></div>
                                 </div>
                             </div>
-                            <div className='bg-secondary ml-4 mr-7 mt-4 rounded-md border-extralight h-[83vh] box-shadow-main1 overflow-scroll'>
+                            <div className='bg-secondary px-7 py-10 ml-4 mr-7 mt-4 rounded-md border-extralight h-[83vh] box-shadow-main1 overflow-scroll'>
 
                                 {data?.data?.user && props.children}
                             </div>

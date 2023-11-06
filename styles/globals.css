@@ -11,6 +11,7 @@ body {
 :root {
   --color-primary: #fff;
   --color-secondary: #e24840;
+  --color-tertiary: #e24840;
   --color-home: #ab0033;
   --primary-bg: #1f2233;
   --secondary-bg: #24283d;
