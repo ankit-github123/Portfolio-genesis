@@ -1,3 +1,4 @@
+import { Drawer } from "@common-ui/Drawer";
 import {
   Dialog,
   DialogActions,
@@ -5,7 +6,7 @@ import {
   DialogTitle,
   styled,
 } from "@mui/material";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const CustomDialog = styled(Dialog)(({ theme }) => {
   return {
@@ -78,5 +79,30 @@ export const useModal = () => {
     showModal,
     hideModal,
     ModalComponent,
+  };
+};
+
+export const useDrawer = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleDrawerOpen = useCallback(() => setOpen(true), []);
+
+  const handleDrawerClose = useCallback(() => setOpen(false), []);
+
+  const DrawerComponent = ({ content }) => {
+    return (
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={handleDrawerClose}
+        content={content}
+      />
+    );
+  };
+
+  return {
+    handleDrawerOpen,
+    handleDrawerClose,
+    DrawerComponent,
   };
 };

@@ -86,6 +86,20 @@ background-repeat: no-repeat; */
 .box-show-main-spread {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+.instructions-title-gradient {
+  background: linear-gradient(90deg, #ff6f61, #805ad5);
+  /* background: linear-gradient(45deg, #c6b799, #e0cfb2); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.7;
+}
+
+.MuiDateCalendar-root {
+  background: var(--primary-bg);
+  color: var(--color-primary);
+}
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;

@@ -11,8 +11,10 @@ const Home = () => {
       const response = await getProviders();
       setProviders(response);
     };
-    initializeProviders();
-  }, []);
+    if (!providers) {
+      initializeProviders();
+    }
+  }, [providers]);
   const { data: session } = useSession();
   console.log(providers, "providers1");
   return (

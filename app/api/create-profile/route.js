@@ -1,4 +1,4 @@
-import Profiles from "@models/Profiles";
+import Profilers from "@models/Profilers";
 import { connectToDB } from "@utils/database/database";
 import * as fs from "fs";
 import path from "path";
@@ -36,14 +36,17 @@ export const POST = async (req, res) => {
         return res.status(500).send("Error saving image.");
       }
       await connectToDB();
-      const ProfileData = new Profiles({
-        firstname,
-        lastname,
-        description,
-        username,
-        email,
-        userId,
-        profileimage: filePath,
+      //   Profilers.findOneAndUpdate
+      const ProfileData = new Profilers({
+        profile: {
+          firstname,
+          lastname,
+          description,
+          username,
+          email,
+          userId,
+          profileimage: filePath,
+        },
       });
 
       await ProfileData.save();
@@ -60,7 +63,7 @@ export const POST = async (req, res) => {
 export const GET = async (req, res) => {
   try {
     await connectToDB();
-    const data = await Profiles.find({});
+    const data = await Profilers.find({});
     console.log(data, "dt1");
     const filePath = path.join(__dirname, "temp", "ankit.png");
     // fs.readFile(filePath, async (err, buff) => {

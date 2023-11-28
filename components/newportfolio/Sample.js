@@ -79,7 +79,15 @@ const IconSearch = (props) => {
             className="bg-secondary w-full p-4 rounded-md border border-[rgba(255,255,255,0.15)]"
           />
         </div>
-        {searchTerm !== "" ? { filteredIcons } : <>{renderTemplateIcons("")}</>}
+        {searchTerm !== "" ? (
+          <IconContext.Provider value={{ color: "darkgrey" }}>
+            {filteredIcons}
+          </IconContext.Provider>
+        ) : (
+          <IconContext.Provider value={{ color: "darkgrey" }}>
+            {renderTemplateIcons("")}
+          </IconContext.Provider>
+        )}
       </div>
       <div className="flex justify-end mx-12 mt-4">
         <Button

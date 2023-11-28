@@ -1,6 +1,6 @@
 import { Schema, models, model } from "mongoose";
 
-const ProfilesSchema = new Schema({
+export const ProfilesSchema = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
     ref: "Users",
@@ -38,5 +38,3 @@ const ProfilesSchema = new Schema({
     required: true,
   },
 });
-
-export default models.Profiles || model("Profiles", ProfilesSchema);

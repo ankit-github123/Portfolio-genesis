@@ -25,6 +25,8 @@ module.exports = {
       colors: {
         default: "#ffffff",
         light: "rgba(255,255,255,0.7)",
+        lighter: "rgba(255,255,255,0.4)",
+        lightest: "var(--border-extralight)",
         home: "var(--color-home)",
         tertiary: "#e24840",
       },

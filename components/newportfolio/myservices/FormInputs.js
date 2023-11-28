@@ -3,7 +3,6 @@ import { useModal } from "@utils/customhook/modal";
 import { servicesForm } from "@utils/forms/services";
 import React from "react";
 import ModalContent from "./ModalContent";
-import { IconContext } from "react-icons";
 import * as IoIcons from "react-icons/io";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
