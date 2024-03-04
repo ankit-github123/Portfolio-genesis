@@ -1,0 +1,131 @@
+autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from "react";
+import { withStyles, } from '@material-ui/core/styles';
+
+import { faMapMarker, faEnvelope, faPhone, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import TextField from '@material-ui/core/TextField';
+import {
+    createMuiTheme,
+    makeStyles,
+    createStyles,
+    Theme as AugmentedTheme,
+    ThemeProvider
+  } from "@material-ui/core/styles";
+  import { orange, blue, green } from "@material-ui/core/colors";
+  
+import Card from "./ContactCard";
+import { text } from "./Text";
+import "./contact.css";
+const Contact = () => {
+    // const [form,setform] =useState({name:'',email:'',subject:'',message:''})
+    const [name, setnewname] = useState('')
+
+    const useStyles = makeStyles(theme =>
+        createStyles({
+          root: {
+            color: green[900],
+            "&.Mui-focused": {
+              border:"2px solid red",
+          }
+          },
+      
+        })
+      );
+    const CssTextField = withStyles({
+        root: {
+            '& label.Mui-focused': {
+                color: 'red',
+            },
+            '& .MuiInput-underline:after': {
+                borderBottomColor: 'green',
+            },
+            '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                    borderColor: 'whitesmoke',
+                },
+                '&:hover fieldset': {
+                    borderColor: 'white',
+                },
+                '&.Mui-focused fieldset': {
+                    borderColor: '#e24840',
+                },
+            },
+        },
+    })(TextField);
+
+    const onChangeHandler = (e) => { 
+        setnewname(e.target.value) 
+    }
+    const classes = useStyles();
+    return (
+        <div className="contact_main_div" >
+            {console.log(name,"name name name")}
+            <div className="contact_title common_pad_left" >
+                <h6 className={"color"} > Contact Me </h6> <h1> Get In Touch </h1> <div className="border_botton_red" > </div> </div> <div className="row contact_input_section">
+                <div className="col-lg-7 common_pad_left">
+                    <div className="input_class_contact" >
+                        <div className="input_container" >
+                            
+                            {/* <input onChange={(e)=>{setname(e.target.value)}}/> */}
+                            <TextField
+                                // className="contact_input_box"
+                                label="Name"
+                                InputLabelProps={{className:'textfield__label'}}
+                                variant="outlined"
+                                id="custom-css-outlined-input"
+                                classes={{
+                                    root:classes.root,
+                                  }}  
+                                style={{ fontSize: "18px" }}
+                               
+                            /> </div> <div className="input_container" >
+                            <CssTextField
+                                // className="contact_input_box"
+                                label="Email"
+                                variant="outlined"
+                                id="custom-css-outlined-input"
+                                onChange={(e)=>{setnewname(e.target.value)
+                                }}
+                            /> </div>
+                        <div className="input_container" >
+                            <CssTextField
+                                // className="contact_input_box"
+                                label="Subject"
+                                variant="outlined"
+                                id="custom-css-outlined-input"
+                            /> </div>
+                        <div className="input_container" >
+                            <CssTextField
+                                // className="contact_input_box"
+                                multiline
+                                label="Subject"
+                                variant="outlined"
+                                id="custom-css-outlined-input"
+                            /> </div>
+                        <div className="input_container" >
+                            <button className="submit_button">SEND MESSAGE</button>
+                        </div>
+                    </div> </div> <div className="col-lg-5" >
+                    <div className="contact_card_container" >
+                        <Card content={text[0]} icon={faMapMarker} />
+                        <Card content={text[1]} icon={faEnvelope} />
+                        <Card content={text[2]} icon={faPhone} />
+                        <Card content={text[3]} icon={faGlobe} />
+                    </div> </div> </div> </div>
+    )
+}
+
+export default Contact;

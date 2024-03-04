@@ -1,0 +1,124 @@
+.about_container {
+  background: #1f2233;
+  padding: 80px 95px 65px 83px;
+}
+
+.profileImg_wrap {
+  width: 370px;
+  height: 480px;
+  background-color: #303349;
+  padding: 10px;
+}
+.profileImg_wrap:hover{
+    background-color: rgb(84 91 122 / 80%);
+}
+
+.profileImg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+.star_border {
+  color: #e24840;
+}
+.about_mainheading {
+  color: #fd5c55;
+  font-size: 18px;
+  font-weight: 600;
+}
+.MuiRating-root {
+  color: #e24840 !important;
+}
+.about_mainhead {
+  color: white;
+  font-size: 28px;
+  font-size: 600;
+}
+
+.about_mainhead_bottom {
+  background-color: #fd5c55;
+  width: 60px;
+  height: 2px;
+  margin: 10px 0;
+}
+
+.about_data {
+    color: white;
+    text-align: justify;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 35px 0;
+    line-height: 22px;
+}
+.about_proficiency {
+  background-color: #24283D;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-gap: 10px; */
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  color: white;
+}
+
+.about_proficiency_item {
+  padding: 10px 11px 4px 7px;
+  font-size: 30px;
+  text-align: left;
+}
+  /* .about_proficiency_item:hover {
+    background-color: rgb(84 91 122 / 80%);
+    
+  } */
+  .MuiTypography-body1 {
+    font-size: 1.5rem !important;
+}
+  .about_resumeBtn{
+    border-radius: 3px;
+    background-color: #fd5c55;
+    border: 1px solid #fd5c55;
+    padding: 14px 25px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none !important;
+  }
+
+  @media (max-width:800px) {
+    .profileImg_wrap {
+      width: auto;
+      height: 510px;
+      background-color: #303349;
+      padding: 10px;
+      display: none;
+  }
+  .about_container {
+    background: #1f2233;
+    padding: 55px 0 0px;
+}
+.about_resumeBtn {
+  margin: 35px 0;
+
+}
+.border_botton_red {
+  width: 14% !important;
+}
+  }
+@media (max-width:600px) {
+  .services_title {
+    padding: 45px 0px 30px !important;
+}
+.about_proficiency {
+  background-color: #24283D;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-gap: 10px; */
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  color: white;
+}
+}

@@ -1,0 +1,236 @@
+.outer {
+      position: fixed;
+      z-index: 100;
+      width: 100%;
+}
+.header {
+      padding: 18.5px 0;
+}
+.active {
+      color: #ec574f !important;
+  }
+.active1 {
+      background-color: #1f2233;
+      transition-duration: .75s;
+      border-bottom: 1px solid rgba(255, 255, 255, .095);
+      
+}
+.header_in {
+      display: flex;
+}
+.header_op_div {
+      display: flex;
+      flex: 8;
+      width: 100%;
+      justify-content: space-between;
+}
+.space_div {
+      flex: 1;
+}
+/* .logo_div {
+      flex: 1;
+} */
+.bm-burger-button {
+      position: fixed;
+      width: 36px;
+      height: 20px !important;
+      margin-top: 8px;
+      left: 30px;
+      top: 15px;
+  }
+ .logo_ham_header {
+      
+            width: 100%;
+            font-size: 19px;
+            /* display: -webkit-flex; */
+            display: flex !important;
+            /* -webkit-justify-content: center; */
+            justify-content: center;
+            padding: 15px 0 37px;
+        }
+        /* .ham_container {
+              
+        } */
+
+.bm-burger-bars {
+      width: 32px;
+      /* opacity: 0.75 !importwnt; */
+      background: #d3d5dd;
+      height: 3px !important;
+      line-height: 10px !;
+      opacity: 0.75 !important;
+  }
+.logo_a {
+      color: white;
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 700;
+      font-size: 21px;
+}
+.logo_k {
+      color: #ec574f;
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 700;
+      font-size: 20px;
+}
+.logo_style {
+      width: 85px;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+}
+.logo_style img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+}
+.logo_style1 img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+}
+.logo_style_scroll1 img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+}
+.logo_style_scroll {
+      width: 72px;
+      height: 100%;
+      position: absolute;
+      top: 0px; 
+}
+.logo_style_scroll img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+}
+.logo_style1 {
+      display: none;
+}
+.logo_style_scroll1 {
+      display: none;
+}
+.logo_style_nav {
+      width: 85px;
+      height: 100%;
+      position: relative;
+      top: 14px;
+      left: -19px;
+  }
+  .logo_style_nav img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+}
+.options_div {
+      display: flex;
+}
+.options_div a{
+      color: beige;
+    font-weight: 550;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.options_div a:hover {
+      color: #ec574f;
+}
+/* #FD5C55 */
+.options {
+      margin: auto 15px;
+      font-size: 13px;
+      color: white;
+}
+
+.ham-contanier {
+      margin: auto 0;
+      display: none;
+      margin-right: 10px;
+      cursor: pointer;
+      padding-right: 10px;
+  }
+
+  .options1 {
+      margin: 15px 0px;
+      font-size: 15px;
+      color: white;
+}
+
+  .one {
+      width: 37px;
+      height: 4px;
+      background-color: #717171;
+      margin: 6px 0;
+    }
+    .two {
+      width: 26px;
+      height: 4px;
+      background-color: #717171;
+      margin: 6px 0;
+    }
+    .three {
+      width: 16px;
+      height: 4px;
+      background-color: #717171;
+      margin: 6px 0;
+    }
+
+
+
+    @media (max-width:750px) {
+      .ham-contanier {
+          display: block !important;
+          position: relative;
+          left: 20px;
+      }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+      .options_div {
+            display: none;
+      }
+      .header_op_div {
+            justify-content: center;
+      }
+      .bm-burger-button {
+            display: block !important;
+          }
+      .logo_style_scroll1 {
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            top: 0px; 
+            display: block
+      }
+      .logo_style {
+            width: 85px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 160px;
+      }
+      .logo_style_scroll {
+            width: 85px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 160px;
+      }
+      .logo_style1 {
+            width: 50px;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      display: block;
+      }
+}

@@ -1,0 +1,71 @@
+    * {
+        font-family: 'Montserrat', sans-serif !important;
+        margin: 0;
+    }
+    body::-webkit-scrollbar {
+        width: 5px;
+      }
+       
+      body::-webkit-scrollbar-track {
+       background: #1F2233;
+      }
+       
+      body::-webkit-scrollbar-thumb {
+        background-color: #e24840;
+        outline: 1px solid #24283D;
+      }
+    .color {
+        color: #e24840;
+    }
+    
+    .color_white {
+        color: whitesmoke;
+    }
+    
+    .common_pad_left {
+        padding-left: 100px;
+    }
+    .common_pad_right {
+        padding-right: 100px;
+    }
+    
+    .background {
+        background: #e24840;
+    }
+    /* #ec574f */
+    .MuiFormControl-root {
+        width: 100%;
+    }
+    .MuiOutlinedInput-input {
+        padding: 13px 15px !important;
+        color: beigem !important;
+        font-size: 15px !important;
+        letter-spacing: 0.7px;
+        font-weight: 500;
+    }
+    .MuiInputLabel-outlined {
+        z-index: 1;
+        transform: translate(14px, 20px) scale(1);
+        pointer-events: none;
+        font-size: 15px;
+        color: white !important;
+    }
+    .MuiInputBase-input {
+        color: white !important;
+        letter-spacing: 0.7px !important;
+    }
+    .MuiFormLabel-root {
+        font-family: 'Montserrat', sans-serif !important;
+        /* font-size: 1.5rem !important; */
+
+    }
+    .MuiOutlinedInput-inputMultiline {
+        padding: 0;
+        line-height: 1.3 !important;
+    }
+    .centered {
+        position: fixed; /* or absolute */
+        top: 26%;
+        left: 46%;
+        background-color: #1f2233;
+      }
